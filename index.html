@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redirigiendo…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- redirección por meta por si JS está desactivado -->
+    <meta http-equiv="refresh" content="0; url=regalo/login/index.html">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top, #1d2956, #050817 70%);
+            color: #fff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .msg {
+            text-align: center;
+            max-width: 320px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .msg a {
+            color: #ff6fa8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .msg a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        // redirección rápida por JS
+        window.location.replace('regalo/login/index.html');
+    </script>
+</head>
+
+<body>
+    <div class="msg">
+        <p>Redirigiendo a tu regalo…</p>
+        <p>Si no pasa nada, haz clic aquí:
+            <a href="regalo/login/index.html">ver regalo</a>
+        </p>
+    </div>
+</body>
+
+</html>

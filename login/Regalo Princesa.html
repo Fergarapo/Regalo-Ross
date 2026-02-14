@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Regalo Princesa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>🐮🐮 ❤️Bienvenida a tu regalo❤️ 🐮🐮</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Adivina tu usuario">
+            <input type="password" id="password" placeholder="Adivina tu contraseña">
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+
+
+        <div class="hints">
+            <button id="hint1" disabled>
+                <img src="../icons/question-sign.png" alt="Pista 1">
+            </button>
+            <button id="hint2" disabled>
+                <img src="../icons/question-sign.png" alt="Pista 2">
+            </button>
+            <button id="hint3" disabled>
+                <img src="../icons/question-sign.png" alt="Pista 3">
+            </button>
+
+
+            <span id="hint-text"></span>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

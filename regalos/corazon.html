@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corazón de palabras para Ross</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0b1522;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+
+        .container p {
+            position: absolute;
+            color: #ff5277;
+            text-shadow: 0 0 18px #f20044;
+            animation: latiendo 0.8s linear infinite;
+            font-weight: 600;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .amor {
+            right: 240px;
+            bottom: 100px;
+            font-size: 32px;
+            color: #ff899f;
+        }
+
+        /* lado derecho */
+        .primera {
+            right: 250px;
+            bottom: 0px;
+        }
+
+        .segunda {
+            right: 235px;
+            bottom: 15px;
+        }
+
+        .tercera {
+            right: 215px;
+            bottom: 25px;
+        }
+
+        .cuarta {
+            right: 205px;
+            bottom: 35px;
+        }
+
+        .quinta {
+            right: 190px;
+            bottom: 45px;
+        }
+
+        .sexta {
+            right: 175px;
+            bottom: 60px;
+        }
+
+        .septima {
+            right: 160px;
+            bottom: 75px;
+        }
+
+        .octava {
+            right: 145px;
+            bottom: 90px;
+        }
+
+        .novena {
+            right: 140px;
+            bottom: 105px;
+        }
+
+        .decima {
+            right: 125px;
+            bottom: 120px;
+        }
+
+        .decima1 {
+            right: 110px;
+            bottom: 135px;
+        }
+
+        .decima2 {
+            right: 100px;
+            bottom: 150px;
+        }
+
+        .decima3 {
+            right: 100px;
+            bottom: 165px;
+        }
+
+        .decima4 {
+            right: 100px;
+            bottom: 180px;
+        }
+
+        .decima5 {
+            right: 105px;
+            bottom: 195px;
+        }
+
+        .decima6 {
+            right: 110px;
+            bottom: 210px;
+        }
+
+        .decima7 {
+            right: 120px;
+            bottom: 225px;
+        }
+
+        .decima8 {
+            right: 130px;
+            bottom: 240px;
+        }
+
+        .decima9 {
+            right: 140px;
+            bottom: 255px;
+        }
+
+        .vigesima {
+            right: 175px;
+            bottom: 270px;
+        }
+
+        .vigesima1 {
+            right: 205px;
+            bottom: 255px;
+        }
+
+        .vigesima2 {
+            right: 220px;
+            bottom: 240px;
+        }
+
+        .vigesima3 {
+            right: 230px;
+            bottom: 225px;
+        }
+
+        .vigesima4 {
+            right: 240px;
+            bottom: 210px;
+        }
+
+        .vigesima5 {
+            right: 250px;
+            bottom: 190px;
+        }
+
+        .vigesima6 {
+            right: 250px;
+            bottom: 175px;
+        }
+
+        /* lado izquierdo (espejo) */
+        .primera- {
+            left: 190px;
+            bottom: 15px;
+        }
+
+        .segunda- {
+            right: 285px;
+            bottom: 30px;
+        }
+
+        .tercera- {
+            right: 305px;
+            bottom: 40px;
+        }
+
+        .cuarta- {
+            right: 315px;
+            bottom: 55px;
+        }
+
+        .quinta- {
+            right: 345px;
+            bottom: 70px;
+        }
+
+        .sexta- {
+            right: 355px;
+            bottom: 85px;
+        }
+
+        .septima- {
+            right: 360px;
+            bottom: 100px;
+        }
+
+        .octava- {
+            right: 375px;
+            bottom: 115px;
+        }
+
+        .novena- {
+            right: 388px;
+            bottom: 128px;
+        }
+
+        .decima- {
+            right: 395px;
+            bottom: 140px;
+        }
+
+        .decima-1 {
+            right: 405px;
+            bottom: 155px;
+        }
+
+        .decima-4 {
+            right: 420px;
+            bottom: 170px;
+        }
+
+        .decima-5 {
+            right: 430px;
+            bottom: 190px;
+        }
+
+        .decima-6 {
+            right: 435px;
+            bottom: 205px;
+        }
+
+        .decima-7 {
+            right: 415px;
+            bottom: 220px;
+        }
+
+        .decima-8 {
+            right: 413px;
+            bottom: 235px;
+        }
+
+        .decima-9 {
+            right: 405px;
+            bottom: 248px;
+        }
+
+        .vigesima- {
+            right: 390px;
+            bottom: 265px;
+        }
+
+        .vigesima-1 {
+            right: 370px;
+            bottom: 279px;
+        }
+
+        .vigesima-2 {
+            right: 340px;
+            bottom: 265px;
+        }
+
+        .vigesima-3 {
+            right: 320px;
+            bottom: 250px;
+        }
+
+        .vigesima-4 {
+            right: 310px;
+            bottom: 235px;
+        }
+
+        .vigesima-5 {
+            right: 300px;
+            bottom: 215px;
+        }
+
+        .vigesima-6 {
+            right: 285px;
+            bottom: 200px;
+        }
+
+        .vigesima-7 {
+            right: 285px;
+            bottom: 190px;
+        }
+
+        @keyframes latiendo {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .btn-volver {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 0.6rem 1.6rem;
+            border-radius: 999px;
+            border: none;
+            background: linear-gradient(135deg, #ff2f7b, #ff6fa8);
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+            outline: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+            z-index: 1000;
+        }
+
+        .btn-volver:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4);
+            filter: brightness(1.05);
+        }
+
+        .btn-volver:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- palabra central -->
+        <p class="amor">Ross</p>
+
+        <!-- lado derecho con tus frases -->
+        <p class="primera">AMOR</p>
+        <p class="segunda">TE AMO</p>
+        <p class="tercera">ROSS</p>
+        <p class="cuarta">MI NIÑA</p>
+        <p class="quinta">TE ADMIRO</p>
+        <p class="sexta">TE ADORO</p>
+        <p class="septima">ESTARÉ</p>
+        <p class="octava">SIEMPRE</p>
+        <p class="novena">CONTIGO</p>
+        <p class="decima">MI</p>
+        <p class="decima1">AMOR</p>
+        <p class="decima2">ROSS</p>
+        <p class="decima3">MI</p>
+        <p class="decima4">CORAZÓN</p>
+        <p class="decima5">ES</p>
+        <p class="decima6">TODO</p>
+        <p class="decima7">TUYO</p>
+        <p class="decima8">SOY</p>
+        <p class="decima9">FELIZ</p>
+        <p class="vigesima">A TU LADO</p>
+        <p class="vigesima1">ROSS</p>
+        <p class="vigesima2">AMOR</p>
+        <p class="vigesima3">SONRISA</p>
+        <p class="vigesima4">ABRAZOS</p>
+        <p class="vigesima5">CARIÑO</p>
+        <p class="vigesima6">GRACIAS</p>
+
+        <!-- lado izquierdo, espejo con las mismas frases -->
+        <p class="primera-">AMOR</p>
+        <p class="segunda-">TE AMO</p>
+        <p class="tercera-">ROSS</p>
+        <p class="cuarta-">MI NIÑA</p>
+        <p class="quinta-">TE ADMIRO</p>
+        <p class="sexta-">TE ADORO</p>
+        <p class="septima-">ESTARÉ</p>
+        <p class="octava-">SIEMPRE</p>
+        <p class="novena-">CONTIGO</p>
+        <p class="decima-">MI</p>
+        <p class="decima-1">AMOR</p>
+        <p class="decima-4">ROSS</p>
+        <p class="decima-5">CORAZÓN</p>
+        <p class="decima-6">ES</p>
+        <p class="decima-7">TODO</p>
+        <p class="decima-8">TUYO</p>
+        <p class="decima-9">SOY</p>
+        <p class="vigesima-">FELIZ</p>
+        <p class="vigesima-1">A TU LADO</p>
+        <p class="vigesima-2">ROSS</p>
+        <p class="vigesima-3">AMOR</p>
+        <p class="vigesima-4">SONRISA</p>
+        <p class="vigesima-5">ABRAZOS</p>
+        <p class="vigesima-6">CARIÑO</p>
+        <p class="vigesima-7">GRACIAS</p>
+    </div>
+    <button class="btn-volver" onclick="window.location.href='../menu/menu.html'">
+        Volver
+    </button>
+</body>
+
+</html>

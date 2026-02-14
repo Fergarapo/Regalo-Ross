@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-image: url("../icons/FondoVaquitas.png");   /* tu fondo borroso */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Envoltorio del título + tarjetas */
+.menu-wrapper {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 2rem 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Título arriba */
+.menu-title {
+  margin: 0 0 1.5rem;
+  color: #ff2f7b;
+}
+
+/* Contenedor de las 4 tarjetas */
+.options-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Cada opción como recuadro */
+.option-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 1rem;
+  border-radius: 16px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  z-index: 1;  /* texto encima */
+}
+
+/* Capa de fondo blurreada dentro de cualquier option-card */
+.option-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  transform: scale(1.1);  /* para que el blur no deje bordes vacíos */
+  z-index: -1;
+}
+
+
+/* Texto por encima del blur */
+.option-card::after {
+  content: attr(data-label);     /* lo usaremos abajo o puedes dejar solo el texto normal */
+}
+
+/* Para que el texto normal del botón se vea encima */
+.option-card span,
+.option-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Asegúrate de que el texto no herede color raro del fondo */
+.option-card {
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Responsive: en pantallas anchas puedes poner 2x2 si quieres */
+@media (min-width: 640px) {
+  .options-container {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columnas x 2 filas */
+    gap: 1.2rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-wrapper {
+    width: 90%;
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+.option-flores::before {
+  background-image: url("../icons/flores.png"); /* o .png si es png */
+}
+
+.option-carta::before{
+  background-image: url("../icons/carta.png");
+}
+
+
+.option-galaxia::before {
+  background-image: url("../icons/galaxia.png");
+}
+
+.option-corazon::before{
+  background-image: url("../icons/corazon.png");
+}
