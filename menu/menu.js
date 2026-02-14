@@ -15,7 +15,7 @@ option2.addEventListener("click", function () {
 
 // Animación
 option3.addEventListener("click", function () {
-  window.location.href = "animacion.html";
+  window.location.href = "../regalos/galaxia.html";
 });
 
 // ???
